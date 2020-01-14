@@ -1,0 +1,45 @@
+{% extends "login/base.html" %}
+
+{% block content %}
+<div class="account-container register">
+	<div class="content clearfix">
+		<form action="/register/" method="POST">
+            {% csrf_token %}
+
+			<h1>Signup for Free Account</h1>			
+			<div class="login-fields">
+				<!-- <p>Create your free account:</p> -->
+				<div class="field">
+					<label for="firstname">First Name:</label>
+					<input type="text" id="firstname" name="first_name" value="" placeholder="First Name" class="login" required/>
+				</div> 
+				<div class="field">
+					<label for="firstname">Last Name:</label>
+					<input type="text" id="lastname" name="last_name" value="" placeholder="Last Name" class="login" required/>
+				</div> 
+				<div class="field">
+					<label for="email">Email Address:</label>
+					<input type="text" id="email" name="email" value="" placeholder="Email" class="login" required/>
+				</div> 
+				<div class="field">
+					<label for="password">Password:</label>
+					<input type="password" id="password" name="password" value="" placeholder="Password" class="login" required/>
+				</div> 
+				<div class="field">
+					<label for="password">Confirm Password:</label>
+					<input type="password" id="password" name="cpassword" value="" placeholder="Confirm Password" class="login" required/>
+				</div> 
+			</div>
+			<div class="login-actions">					
+				<button type="submit" class="button btn btn-primary btn-large">Register</button>
+			</div> 
+		</form>
+	</div>
+</div> 
+
+
+<div class="login-extra">
+	Already have an account? <a href="/login/">Login to your account</a>
+</div> 
+
+{% endblock content %}

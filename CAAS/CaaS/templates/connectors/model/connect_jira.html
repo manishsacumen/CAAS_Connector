@@ -1,0 +1,38 @@
+<div class="modal fade" id="jira_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Connect with Jira</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+         <form id="basic-form" method='post' action='/jira/jira_register/'>
+          {% csrf_token %}
+            <div class="control">
+                <label for="exampleFormControlInput1">App Url</label>
+                <input type="text" class="span3" name="app_url" id="app_url"  required="">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Email Id</label>
+                <input type="text" placeholder="name@example.com" class="span3" name="email_id" id="email_id" required="">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">API Key</label>
+                <input type="text" class="span3" name="api_key" id="api_key" required="">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlInput1">Project Key</label>
+                <input type="text" class="span3" name="project_key" id="project_key" required="">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+         </form>
+        </div>
+       
+      </div>
+    </div>
+  </div>
